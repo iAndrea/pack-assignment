@@ -1,0 +1,1 @@
+ALTER TABLE "uploads" ADD COLUMN "archived" boolean DEFAULT false NOT NULL;

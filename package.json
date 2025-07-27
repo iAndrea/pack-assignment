@@ -1,0 +1,42 @@
+{
+	"name": "pack-assignment",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"db:generate": "drizzle-kit generate:pg",
+		"db:migrate": "tsx src/lib/db/migrate.ts",
+		"docker:up": "docker-compose up -d",
+		"docker:down": "docker-compose down",
+		"setup": "npm install && npm run docker:up && sleep 5 && npm run db:migrate"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.20.4",
+		"@types/node": "^24.1.0",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"drizzle-kit": "^0.20.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.30.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.3",
+		"tslib": "^2.4.1",
+		"tsx": "^4.0.0",
+		"typescript": "^5.0.0",
+		"vite": "^4.4.2"
+	},
+	"dependencies": {
+		"@types/mime-types": "^2.1.4",
+		"@types/pg": "^8.10.0",
+		"drizzle-orm": "^0.29.0",
+		"mime-types": "^2.1.35",
+		"pg": "^8.11.0"
+	},
+	"type": "module"
+}

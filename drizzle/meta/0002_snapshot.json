@@ -1,0 +1,125 @@
+{
+	"id": "544e9c55-ebaf-4dac-957b-ab4c43725f60",
+	"prevId": "ba8e0561-dd17-471e-9d16-f8282bd5975d",
+	"version": "5",
+	"dialect": "pg",
+	"tables": {
+		"uploads": {
+			"name": "uploads",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "serial",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"title": {
+					"name": "title",
+					"type": "varchar(200)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"description": {
+					"name": "description",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"category": {
+					"name": "category",
+					"type": "varchar(100)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"language": {
+					"name": "language",
+					"type": "varchar(10)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"provider": {
+					"name": "provider",
+					"type": "varchar(100)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"roles": {
+					"name": "roles",
+					"type": "json",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"file_name": {
+					"name": "file_name",
+					"type": "varchar(255)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"original_name": {
+					"name": "original_name",
+					"type": "varchar(255)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"mime_type": {
+					"name": "mime_type",
+					"type": "varchar(100)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"file_size": {
+					"name": "file_size",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"file_path": {
+					"name": "file_path",
+					"type": "varchar(500)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"view_count": {
+					"name": "view_count",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"default": 0
+				},
+				"archived": {
+					"name": "archived",
+					"type": "boolean",
+					"primaryKey": false,
+					"notNull": true,
+					"default": false
+				},
+				"created_at": {
+					"name": "created_at",
+					"type": "timestamp",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				},
+				"updated_at": {
+					"name": "updated_at",
+					"type": "timestamp",
+					"primaryKey": false,
+					"notNull": true,
+					"default": "now()"
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {}
+		}
+	},
+	"enums": {},
+	"schemas": {},
+	"_meta": {
+		"columns": {},
+		"schemas": {},
+		"tables": {}
+	}
+}
