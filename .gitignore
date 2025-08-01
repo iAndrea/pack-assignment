@@ -65,6 +65,7 @@ jspm_packages/
 
 # Upload directory - user uploaded files should not be tracked
 uploads/
+!src/routes/api/uploads
 *.tmp
 
 # Database files (local)
